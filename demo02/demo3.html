@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="txt1">
+	<input type="sign" class="sign">
+	<input type="text" class="txt2">
+	<button class="btn">计算</button>
+	<script>
+		var txt1 = document.querySelector('.txt1');
+		var txt2 = document.querySelector('.txt2');
+		var sign = document.querySelector('.sign');
+		var btn = document.querySelector('.btn');	
+		btn.onclick = function(){
+			var num1 = Number(txt1.value);
+			var num2 = Number(txt2.value);
+
+			switch(sign.value){
+				case "+" : console.log(num1+num2);break;
+				case "-" : console.log(num1-num2);break;
+				case "*" : console.log(num1*num2);break;
+				case "/" : console.log(num1/num2);break;
+			}		
+		}
+
+	</script>
+</body>
+</html>

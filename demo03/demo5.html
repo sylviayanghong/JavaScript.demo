@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>在<span class="seconds"></span>秒后跳转到百度</h3>
+
+	<script>
+
+		var n = 5;
+		setInterval(function(){
+			n--;
+			if(n===0){
+				location.href = "http://baidu.com";
+			}
+			document.querySelector('.seconds').innerHTML = n;
+		},1000);
+		
+		
+	</script>
+
+</body>
+</html>

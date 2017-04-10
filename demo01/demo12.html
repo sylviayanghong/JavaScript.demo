@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input class="text1" type="text">
+	<input class="sign" type="text">
+	<input class="text2" type="text">
+	<button class="btn">输入</button>
+	<script>
+		var btn = document.querySelector('.btn');
+		var txt1 = document.querySelector('.text1');
+		var sin =document.querySelector('.sign');
+		var txt2 = document.querySelector('.text2');
+		btn.onclick = function(){
+				var number1 = Number(txt1.value);
+				var number2 = Number(txt2.value);
+			if(sin.value=='+'){
+				alert(number1 + number2);
+			}
+			if(sin.value=='-'){
+				var result = number1 - number2;
+				alert(result);
+			}	
+			if(sin.value=='*'){
+				var result = number1 * number2;
+				alert(result);
+			}
+			if(sin.value=='/'){
+				var result = number1 / number2;
+				alert(result);
+			}
+		}
+
+		
+	</script>
+</body>
+</html>

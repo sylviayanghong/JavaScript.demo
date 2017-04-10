@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>0</h3>
+	<button>暂停</button>
+
+	<script>
+		
+		var h = document.querySelector('h3');
+		var n = 0;
+		function count(){
+			n++;
+			h.innerHTML = n;
+		}
+
+		var t = setInterval(count,1000);
+
+		// document.querySelector('button').onclick = function(){
+		// 	clearInterval(t);
+		// }
+		// document.querySelector('button').onclick = function(){
+		// 	t = setInterval(count,1000);
+		// }
+		//鼠标移入让计数器停止
+		document.querySelector('button').onmouseenter = function(){
+			clearInterval(t);
+		}
+		//鼠标移出让计数器继续
+		document.querySelector('button').onmouseleave = function(){
+			t = setInterval(count,1000);
+		}
+		//若要鼠标移入移出重复添加计数器，就在添加前把之前的清除
+		// document.querySelector('button').onclick = function(){
+		// 	clearInterval(t);
+		// 	setInterval(count,1000);
+		// }
+
+		// 鼠标移动增加一个计数器
+		// document.querySelector('button').onmousemove = function(){
+		// 	setInterval(count,1000);
+		// }
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.aa{
+			color: #f00;
+		}
+		.bb{
+			color: #0f0;
+		}
+		.cc{
+			color: #00f;
+		}
+		.dd{
+			color: #eee;
+		}
+	</style>
+</head>
+<body>
+	<h3 class="aa bb cc dd">好好学习</h3>
+
+	<script>
+		
+		// var str = "btn num txt";
+		// var arr = str.split(" ");
+		// console.log(arr);
+
+		// var arr = ["btn","bg","img"];
+		// var str = arr.join(" ");
+		// console.log(str);
+
+		var h = document.querySelector('h3');
+		var hc = h.className;
+		var arr = hc.split(" ");
+
+		h.onclick = function(){
+			for(var i = 0;i<arr.length;i++){
+				if(arr[i] === 'dd'){
+					arr.splice(i,1);
+				}
+			}
+			console.log(arr);
+			var newClassName = arr.join(" ");
+			h.className = newClassName;
+		}
+	</script>
+</body>
+</html>

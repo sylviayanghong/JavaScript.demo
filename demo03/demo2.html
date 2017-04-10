@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3 class="time"></h3>
+
+	<script>
+		
+		function fun(){
+			var target = new Date('2017-3-31 17:00');
+			var targetTime = target.getTime();
+
+			var dateNow = new Date();
+			var nowTime = dateNow.getTime();
+
+			var sub = targetTime - nowTime;
+
+			var day = Math.floor(sub / (1000*60*60*24));
+			var subDay = Math.floor(sub%(1000*60*60*24));
+
+			var hours = Math.floor(subDay/(1000*60*60));
+			var subTime = Math.floor(subDay%(1000*60*60));
+
+			var minutes = Math.floor(subTime/(1000*60));
+			var subMinutes = Math.floor(subTime%(1000*60));
+
+			var seconds = Math.floor(subMinutes/(1000));
+			var hTime = '距休息日还有：' + day + '天' + hours + '小时' + minutes + '分' + seconds + '秒';
+			document.querySelector('h3').innerHTML = hTime;
+
+		}
+		setInterval(fun,1000);
+	</script>
+</body>
+</html>

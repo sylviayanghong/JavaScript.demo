@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		function funOut(){
+			var n = 100;
+			function funIn(){		//嵌套函数，里边的函数就是闭包函数;
+				console.log(n);
+			}
+			// return funIn;  //返回的是这一个函数;
+			return funIn();  // 没有返回值;
+		}
+		var mfunIn = funOut();  //能输出100，但是mfunIn是未定义;
+		console.log(mfunIn);  //undefind
+		// mfunIn();  //  输出100;
+		//funIn执行完就销毁了，funOut不销毁
+	</script>
+
+</body>
+</html>

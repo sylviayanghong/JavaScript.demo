@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.test li{
+			list-style: none;
+			float: left;
+			border: 1px solid #000;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="test">
+		<li class="btn1">1</li>
+		<li class="btn2">2</li>
+		<li class="btn3">3</li>
+		<li class="btn4">4</li>
+		<li class="btn5">5</li>
+	</ul>
+
+	<script>
+		
+		function siblings(dom) {
+			var newArr = [];
+			var par = dom.parentNode;  //得到s的父节点
+			var child= par.children;  //得到s的全部子节点（元素节点）
+			for(var i = 0;i<child.length;i++){
+				if(child[i] !== dom){
+					newArr.push(child[i]);
+				}
+			}
+			return newArr;
+		}
+		
+		var oLi = document.querySelectorAll(".test li");
+		for(var i = 0;i<oLi.length;i++){
+			oLi[i].onclick = function(){
+				console.log(siblings(this));
+			}
+		}
+
+			// var ns=s.nextSbiling;   //获得s的下一个兄弟节点
+
+			// var ps=s.previousSbiling;  //得到s的上一个兄弟节点
+
+			// var fc=s.firstChild;   //获得s的第一个子节点
+
+			// del_ff(s);    //清理空格
+
+			// var lc=s.lastChile;   //获得s的最后一个子节点
+			// var chils= par.childNodes;  //得到s的全部子节点(元素节点和文本节点)
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		function count(n){
+			// var res = 1;
+			// for(var i = 1;i<=n;i++){
+			// 	res = res * i;
+			// }
+			// return res;
+
+			//递归算法（自己调自己）
+			// if(n === 1){
+			// 	return 1;
+			// }else{
+			// 	return n * count(n-1);  //factorial阶乘的意思
+			// }
+			// return n > 1 ? n * count(n-1) : 1;  //三目运算符写法
+
+			function fun(){
+				return n * count(n);
+			}
+		}
+		console.log(count(5));
+	</script>
+</body>
+</html>

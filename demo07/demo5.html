@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		//封装函数
+		var res = (function(){
+
+			function add(m,n){
+				return m + n;
+			}
+			function sub(m,n){
+				return m - n;
+			}
+			return {
+				fun1: add,
+				fun2: sub	//给封装函数一个接口
+			}
+		})()
+		//利用接口调用封装在里边的函数
+		var result = res.fun2(10,20);
+		console.log(result);
+	</script>
+</body>
+</html>

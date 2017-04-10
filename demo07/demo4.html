@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>显示</button>
+
+	<script>
+		//这样定义变量，外部不能调用，避免了变量定义冲突，但是在函数里包括闭包不加var还是全局变量
+		(function(){
+			var btn = document.querySelector('button');
+			// var n = 0;  //放这输出就是123... 执行完不会销毁
+			btn.onclick = function(){
+				var n = 0;  // 放这输出就一直是1，因为执行完就销毁了
+				n++;
+				// var n = 100;   //定义的变量，放里边函数执行完就销毁，放外边函数执行完不会销毁
+				console.log(n);
+			}
+			
+		})()  //立即执行(匿名函数)(立即调用);
+	</script>
+</body>
+</html>

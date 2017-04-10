@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input class="num" type="text">
+	<button class="btn">猜数字</button>
+	<script>
+		var num = document.querySelector('.num');
+		var btn = document.querySelector('.btn');
+		btn.onclick = function(){
+			var n = Math.floor(Math.random()*100+1);
+			if(num.value<n){
+				alert("错误:小于答案");
+			}else if(num.value>n){
+				alert("错误:大于答案");
+			}else if(num.value=n){
+				alert("恭喜你答对啦！");
+			}
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		// //原始类型
+		// var num1 = 123;
+		// var num2 = 123;
+		// var num = num1 === num2;
+		// console.log(num);
+
+		// var txt1 = 'abc';
+		// var txt2 = 'abc';
+		// var txt = txt1 === txt2;
+		// console.log(txt);
+
+		// var txt3 = 'abc';
+		// var txt4 = txt3;
+		// txt3 = 'sdf';
+		// console.log(txt3);
+		// console.log(txt4);
+
+		// var arr1 = ['1','2'];
+		// var arr2 = ['1','2'];
+		// var arr = arr1 === arr2;
+		// console.log(arr);
+
+		// var arr3 = ['1','2'];
+		// var arr4 = arr3;
+		// arr3[1] = '1';
+		// console.log(arr3);
+		// console.log(arr4);
+
+		function fun(x){
+			x = 100;
+		}
+		var num = 10;
+		fun(num);
+		console.log(num);
+
+
+		// //引用类型
+		// var obj = {name: "mm"};
+		// var obj1 = {name: "mm"};
+		// var obj2 = obj === obj1;
+		// console.log(obj2);
+
+		// var obj3 = {name: "mm"};
+		// var obj4 = obj3;
+		// obj3.name = 'nn';
+		// console.log(obj3.name);
+		// console.log(obj4.name);
+
+		// function fun(x){
+		// 	x.name = '小小';
+		// }
+		// var obj = {name: '小二'}
+		// fun(obj);
+		// console.log(obj.name);
+
+
+		//函数
+
+		//函数声明提升
+		// fun();
+		// //函数声明
+		// function fun(){
+		// 	console.log('haha');
+		// }
+		//函数调用
+		// fun();
+
+		//两个的区别就是函数提升
+
+		//函数表达式
+		// var fun = function(){
+		// 	console.log('haha');
+		// }
+		//函数调用
+		// fun();
+
+	</script>
+</body>
+</html>

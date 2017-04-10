@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h3{
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<h3 class="time"></h3>
+<!-- 	<h3 class="hours"></h3>
+	<h3 class="minutes"></h3>
+	<h3 class="seconds"></h3> -->
+
+	<script>
+		
+		// var dateNow = new Date();
+		// var hours = dateNow.getHours();
+		// var minutes = dateNow.getMinutes();
+		// var seconds = dateNow.getSeconds();
+		// var h = document.querySelector('.hours');
+		// h.innerHTML = hours;
+		// var m = document.querySelector('.minutes');
+		// m.innerHTML = minutes;
+		// var s = document.querySelector('.seconds');
+		// s.innerHTML = seconds;
+		// var hTime = hours + ':' + minutes + ':' + seconds;
+		// document.querySelector('h3').innerHTML = hTime;
+
+		function fun(){
+			var dateNow = new Date();
+			var hours = dateNow.getHours();
+			var minutes = dateNow.getMinutes();
+			var seconds = dateNow.getSeconds();
+			var hTime = hours + ':' + minutes + ':' + seconds;
+			document.querySelector('h3').innerHTML = hTime;
+
+			// if(seconds<10){
+			// 	seconds = "0" + dateNow.getSeconds();
+			// }
+		}
+		setInterval(fun,1000);
+	</script>
+</body>
+</html>

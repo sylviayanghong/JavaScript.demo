@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		function fun(dom){
+			if(typeof(dom) === 'object'){
+				console.log(dom);
+			}else{
+				console.log('请输入正确的参数');
+			}
+		}
+		// fun('aaa');  //输出请输入正确的参数;
+
+		// var obj = {};
+		// fun(obj);	//输出Object{};
+
+		// var n = null;
+		// fun(n);	//输出null;
+
+		// var n = null;
+		// console.log(typeof(n));  //输出Object;
+
+		// var n = {};
+		// console.log(typeof(n));  //输出Object;
+
+		// var obj = []; 
+		// console.log(obj instanceof Array);  输出true;
+		// console.log(obj instanceof Date);  输出false;
+		// console.log(obj instanceof Object);  输出true;
+
+		//逻辑与，或
+
+		function count(m,n){
+			if(typeof(m) === 'number' || typeof(n) === 'number'){
+				result = m + n;
+				console.log(result);
+			}else{
+				console.log('参数错误');
+			}
+		}
+		count(2,'1');
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text">
+	<button>添加</button>
+	<ul>
+		<li>苹果</li>
+		<li>苹果</li>
+		<li>苹果</li>
+		<li>苹果</li>
+		<li>苹果</li>
+	</ul>
+
+	<script>
+		
+		//添加元素
+		var btn = document.querySelector('button');
+		btn.onclick = function(){
+			var oLi = document.createElement('li');
+			var txt = document.querySelector('input');
+			oLi.innerHTML= txt.value;
+			var oUl = document.querySelector('ul');
+			oUl.appendChild(oLi);
+		}
+
+		//删除元素
+		// var oUl = document.querySelector('ul');
+		// var oLi = document.querySelectorAll('ul li');
+		// 	for(var i = 0;i<oLi.length;i++){
+		// 	oLi[i].onclick = function(){
+		// 	oUl.removeChild(this);	
+		// 	}
+		// }
+
+		//委托事件
+		var oUl = document.querySelector('ul');
+		oUl.onclick = function(event){
+			this.removeChild(event.target);
+		}
+		
+
+	</script>
+</body>
+</html>

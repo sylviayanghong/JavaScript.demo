@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button class="btn">1</button>
+	<button class="btn">2</button>
+	<button class="btn">3</button>
+	<button class="btn">4</button>
+	<button class="btn">5</button>
+
+	<script>
+		
+		var btn = document.querySelectorAll('.btn');
+
+		for(var i=0;i<btn.length;i++){
+			console.log(btn[i]);
+			//onclick是dom对象的方法，而btn是dom对象的集合
+			btn[i].onclick = function(){
+				alert('haha');
+			}
+		}	
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button class="btn">播放</button>
+	<input type="text">
+	<audio class="audio" src="music/张杰 - 三生三世.mp3"></audio>
+	<script>
+	//音乐倒计时播放
+		// var n = 5;
+		// setInterval(function(){
+		// 	n--;
+		// 	console.log(n);
+		// 	if(n===0){
+		// 		document.querySelector('.audio').play();//开始播放
+		// 	}
+		// 	// if(n===-20){
+		// 	// 	document.querySelector('.audio').pause();//播放暂停
+		// 	// }
+		// },1000);
+
+
+		//按钮播放暂停音乐
+
+		var btn = document.querySelector('.btn');
+		btn.onclick = function(){
+			if(this.innerHTML==='播放'){
+				document.querySelector('.audio').play();
+				this.innerHTML = '暂停';
+			}else{
+				document.querySelector('.audio').pause();
+				this.innerHTML = '播放';
+			}
+		}
+	</script>
+</body>
+</html>

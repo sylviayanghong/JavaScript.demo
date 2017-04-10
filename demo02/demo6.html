@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input class="num" type="text">
+	<button class="btn">随机取数</button>
+	<script>
+		var btn = document.querySelector('.btn');
+		var num = document.querySelector('.num');
+		btn.onclick = function(){
+		var result = Math.floor(Math.random()*7+1);
+		// floor为向下取整，不加的话就是很多位小数
+		// 乘几就是几个数;加几是从几到几;*7+3：3—10中的数，包括3和10
+			num.value = result;
+			console.log(num.value);
+		}
+
+	</script>
+</body>
+</html>

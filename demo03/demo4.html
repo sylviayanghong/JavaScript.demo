@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.bg{
+			background-color: #0f0;
+		}
+	</style>
+</head>
+<body>
+	<img class="images" src="image/1.png" alt="">
+	<div>
+		<button class="btn">1</button>
+		<button class="btn">2</button>
+		<button class="btn">3</button>
+		<button class="btn">4</button>
+		<button class="btn">5</button>
+	</div>
+
+
+	<script>
+		
+		var arr = ['image/1.png','image/2.jpg','image/3.png','image/4.jpg','image/5.jpg']
+		var img = document.querySelector('.images');
+		var btn = document.querySelectorAll('.btn');
+
+		var n = 1;
+		for(var i = 0;i<btn.length;i++){
+			btn[i].index = i;
+			btn[i].onclick = function(){
+				img.src = arr[this.index];
+				n = this.index;
+				addClass(this,'bg');
+				var aArr = siblings(this);
+				for(var n = 0;n<aArr.length;n++){
+					removeClass(aArr[n],'bg');
+				}	
+
+			}
+			btn[i].onmouseenter = function(){
+				img.src = arr[this.index];
+				n = this.index;
+			}	
+		}
+		function fun(){
+			img.src = arr[n];
+			n++;
+			n = n === 5 ? 0 : n;//也是if表达式的意思
+		// n = bool ? val1 : val2;
+		}
+		var t = setInterval(fun,1000);
+		document.querySelector('img').onmouseenter = function(){
+			clearInterval(t);
+		}
+
+		document.querySelector('img').onmouseleave = function(){
+			t = setInterval(fun,1000);
+		}
+
+		function addClass(dom,str){
+			var newClassName = "";
+			if(dom.className){
+				className = dom.className;
+				newClassName = className + ' ' + str;
+			}else{
+				newClassName = str;
+			}
+			dom.className = newClassName;
+		}
+
+		function removeClass(dom,str){
+			var arr = dom.className.split(" ");
+			for(var i = 0;i<arr.length;i++){
+				if(arr[i] === str){
+					arr.splice(i,1);
+				}
+			}
+			dom.className = arr.join(" ");
+		}
+
+		function siblings(dom) {
+			var newArr = [];
+			var par = dom.parentNode;  
+			var child= par.children; 
+			for(var i = 0;i<child.length;i++){
+				if(child[i] !== dom){
+					newArr.push(child[i]);
+				}
+			}
+			return newArr;
+		}
+
+	</script>
+</body>
+</html>
